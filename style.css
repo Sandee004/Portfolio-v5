@@ -1,10 +1,15 @@
 html {
   height: 100%;
   width: 100%;
+  scroll-behavior: smooth;
 }
 body{
   font-family: 'DM Sans', sans-serif;
 }
-#logo{
-    font-family: 'Great Vibes', cursive;
+.logo{
+    font-family: 'Courgette', cursive;
+}
+.height{
+  min-height: 80vh;
+  
 }
