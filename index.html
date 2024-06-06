@@ -13,72 +13,56 @@
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
     rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+  <script type="module">
+import preline from 'https://cdn.jsdelivr.net/npm/preline@2.3.0/+esm';
+  </script>
 </head>
 
 <!--#0B101B, #C8C8C8, #3DA975-->
+
 <body class="bg-[#202022] text-white">
   <!-- Home -->
-  <div class="border-b-2 border-green-400/50">
-    <div class=" border-b-2 border-green-400/50 py-2 flex justify-between items-center">
-      <div class="px-5 w-2/5">
-        <p class="logo text-white text-3xl font-bold">Sandee</p>
-      </div>
-      <i id="menu-open" class="fa-solid fa-bars mr-5 text-white hover:cursor-pointer sm:hidden"></i>
-
-      <!-- For laptop -->
-      <div
-        class="hidden w-2/5 sm:flex sm:flex-grow sm:flex-row sm:justify-between sm:items-center sm:text-sm sm:text-white">
-        <p class="py-2 px-4 sm:hover:bg-green-400 hover:font-bold hover:text-black hover:cursor-pointer rounded-sm">
-          <a href="#home">Home</a>
-        </p>
-        <p class="py-2 px-4 sm:hover:bg-green-400 hover:font-bold hover:text-black hover:cursor-pointer rounded-sm">
-          <a href="#about">About</a>
-        </p>
-        <p class="py-2 px-4 sm:hover:bg-green-400 hover:font-bold hover:text-black hover:cursor-pointer rounded-sm">
-          <a href="#tools">Tools</a>
-        </p>
-        <p class="py-2 px-4 sm:hover:bg-green-400 hover:font-bold hover:text-black hover:cursor-pointer rounded-sm">
-          <a href="#projects">Projects</a>
-        </p>
-        <p
-          class="py-2 px-4 sm:hover:bg-green-400 hover:font-bold hover:text-black hover:cursor-pointer sm:mr-5 rounded-sm">
-          <a href="#contact">Contact</a>
-        </p>
-      </div>
-
-      <!-- For phone -->
-      <div id="options"
-        class="hidden sm:hidden bg-[#0B101B] text-white text-center flex flex-grow justify-center flex-col fixed top-0 h-full w-[100vw]">
-        <i id="menu-close" class="fa-regular fa-circle-xmark text-2xl hover:cursor-pointer ml-auto mr-20"></i>
-        <p class="py-4 hover:cursor-pointer hover:bg-green-400 w-screen hover:text-black hover:font-bold"><a
-            href="#home">Home</a></p>
-        <p class="py-4 hover:cursor-pointer hover:bg-green-400 w-screen hover:text-black hover:font-bold"><a
-            href="#about">About</a></p>
-        <p class="py-4 hover:cursor-pointer hover:bg-green-400 w-screen hover:text-black hover:font-bold"><a
-            href="#tools">Tools</a></p>
-        <p class="py-4 hover:cursor-pointer hover:bg-green-400 w-screen hover:text-black hover:font-bold"><a
-            href="#projects">Projects</a>
-        </p>
-        <p class="py-4 hover:cursor-pointer hover:bg-green-400 w-screen hover:font-bold"><a href="#contact">Contact</a>
-        </p>
+  <div id="home" class="h-screen sm:h-[60vh] border-b-2 border-green-400/30">
+<header class="flex flex-wrap sm:justify-start sm:flex-nowrap z-50 w-full text-sm py-3 sm:py-0">
+  <nav class="backdrop-filter backdrop-blur-md fixed top-0 border-b-2 border-green-400/50 max-w-[85rem] w-full mx-auto px-4 sm:flex sm:items-center sm:justify-between sm:px-6 lg:px-8 py-3 items-center" aria-label="Global">
+    <div class="flex items-center justify-between">
+      <a class="flex-none text-2xl text-white logo" href="#" aria-label="Brand">Sandee</a>
+      <div class="sm:hidden">
+        <button type="button" class="hs-collapse-toggle size-9 flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-white/20 text-white hover:border-white/40 disabled:opacity-50 disabled:pointer-events-none" data-hs-collapse="#navbar-collapse-with-animation" aria-controls="navbar-collapse-with-animation" aria-label="Toggle navigation">
+          <svg class="hs-collapse-open:hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+          <svg class="hs-collapse-open:block hidden flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
       </div>
     </div>
+    <div id="navbar-collapse-with-animation" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow sm:block">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-end py-2 md:py-0 sm:ps-7">
+        <a class="py-3 ps-px sm:px-3 font-medium text-white" href="#home" aria-current="page">Home</a>
+        <a class="py-3 ps-px sm:px-3 font-medium text-white/80 hover:text-white" href="#about">About</a>
+        <a class="py-3 ps-px sm:px-3 font-medium text-white/80 hover:text-white" href="#tools">Tools</a>
+        <a class="py-3 ps-px sm:px-3 font-medium text-white/80 hover:text-white" href="#project">Project</a>
+        <a class="py-3 ps-px sm:px-3 font-medium text-white/80 hover:text-white" href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+</header>
 
-    <div class="font-bold text-center flex-col h-[90vh] md:h-[80vh] w-[85%] flex justify-center items-center mx-auto">
-      <p class="text-sm">I'm Sandra</p>
+<main id="content" class="h-full flex flex-col px-3 items-center justify-center">
+  <div class="max-w-[85rem] mx-auto py-10 px-4 sm:px-6 lg:px-8">
+    <p class="text-sm">I'm Sandra</p>
       <p class="text-green-400 text-xl logo">Frontend Web Developer</p>
       <p class="text-sm">A glimpse into my world of bits and bytes. An expression of my inner scientist. Giving my
-        dreams
-        an outlet of expression.</p>
+        dreams an outlet of expression.</p>
       <a href="https://drive.google.com/file/d/1OL2M5A6A5OBVOQ8YY8w1Qy9Tdfeya_Uz/view?usp=drivesdk">
         <button
-        class="px-4 py-2 mt-5 bg-transparent border-2 rounded-sm border-green-400 hover:bg-green-400 hover:text-black">Resume</button>
+          class="px-4 py-2 mt-5 bg-transparent border-2 rounded-sm border-green-400 hover:bg-green-400 hover:text-black">Resume</button>
       </a>
-    </div>
+  </div>
+</main>
   </div>
 
-  
+
   <!-- About -->
   <div id="about" class="border-b-2 border-green-400/30">
     <p class="text-2xl font-bold my-3 text-center pt-5">About Me</h2>
@@ -153,83 +137,212 @@
 
 
   <!-- Projects -->
-  <div id="projects" class="height border-b-2 border-green-400/30 my-8">
+  <div id="project" class="my-8 border-b-2 border-green-400/30">
     <p class="text-2xl font-bold my-3 text-center pt-5">Projects</p>
-    <div class="flex flex-col w-[85%] mx-auto pb-8">
-      <a href="frontend.html">
-        <div class="bg-[#2D2E32] py-5 px-5 mb-6 flex flex-row justify-between">
-          <div>
-            <p class="text-green-400 text-2xl font-bold">Frontend Projects</p>
-            <p class="text-sm">Development of beautiful and unique user interface</p>
-            <p class="text-xl underline py-2">20+ projects</p>
+  <div class="mt-8 carousel px-auto w-full mx-auto">
+    <div id="item1" class="carousel-item w-full">
+      <div
+        class="bg-[#2D2E32] w-[85%] text-white shadow-xl flex flex-col md:flex-row justify-center items-center mx-auto">
+        <figure><img class="w-fit rounded-t-md"
+            src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album" /></figure>
+        <div class="px-5 text-center md:text-left md:w-2/3 py-3">
+          <p class="font-bold text-2xl">Inkwell</p>
+          <p>This is a journal based web app. I used it to test my knowledge of database and manipulation. It allows
+            users to create an account, create entries which are also saved to the database and accessible at a later
+            time when required.</p>
+          <div class="flex flex-row gap-4 justify-center items-center mt-5 text-sm text-green-400 md:justify-start">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>Flask</p>
           </div>
-          <i class="fa-solid fa-wand-magic-sparkles text-green-400 pt-2"></i>
-        </div>
-      </a>
-
-      <a href="fullstack.html">
-        <div class="bg-[#2D2E32] py-5 px-5 mb-6 flex flex-row justify-between">
-          <div>
-            <p class="text-green-400 text-2xl font-bold">Fullstack Projects</p>
-            <p class="text-sm">Development of security conscious and scalable backend architecture</p>
-            <p class="text-xl underline py-2">20+ projects</p>
+          <div class="mb-5 flex flex-row flex-wrap gap-2 justify-center md:justify-start">
+            <a href="https://inkwell-sdz3.onrender.com/"
+              class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+              <span>Demo</span>
+              <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </a>
+            <a href="https://github.com/Sandee004/Inkwell"
+              class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+              <span>Source code</span>
+              <i class="fa-solid fa-code"></i>
+            </a>
           </div>
-          <i class="fa-solid fa-wand-magic-sparkles text-green-400 pt-2"></i>
         </div>
-      </a>
+      </div>
     </div>
+
+    <div id="item2" class="carousel-item w-full">
+      <div
+        class="bg-[#2D2E32] w-[85%] text-white shadow-xl flex flex-col md:flex-row justify-center items-center align-center mx-auto">
+        <figure><img class="w-fit rounded-t-md"
+            src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album" /></figure>
+        <div class="px-5 text-center md:text-left md:w-2/3 py-3">
+          <p class="font-bold text-2xl">Hackathon Page</p>
+          <p>A landing page design was to be brought to life for the getlinked hackathon that took place in March this year.</p>
+          <div class="flex flex-row gap-4 justify-center items-center mt-5 text-sm text-green-400 md:justify-start">
+            <p>HTML</p>
+            <p>TailwindCSS</p>
+          </div>
+          <div class="mb-5 flex flex-row flex-wrap gap-2 justify-center md:justify-start">
+                <a href="https://getlinked-kappa-nine.vercel.app/"
+                    class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+                    <span>Demo</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Sandee004/Getlinked"
+                    class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+                    <span>Source code</span>
+                        <i class="fa-solid fa-code"></i>
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div id="item3" class="carousel-item w-full">
+      <div
+        class="bg-[#2D2E32] w-[85%] text-white shadow-xl flex flex-col md:flex-row justify-center items-center align-center mx-auto">
+        <figure><img class="w-fit rounded-t-md"
+            src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album" /></figure>
+        <div class="px-5 text-center md:text-left md:w-2/3 py-3">
+          <p class="font-bold text-2xl">Chatroom</p>
+          <p>Implemented SocketIO for real-time communication like used in Google meet messages tab</p>
+          <div class="flex flex-row gap-4 justify-center items-center mt-5 text-sm text-green-400 md:justify-start">
+            <p>HTML</p>
+            <p>TailwindCSS</p>
+            <p>Flask</p>
+            <p>SocketIO</p>
+          </div>
+          <div class="mb-5 flex flex-row flex-wrap gap-2 justify-center md:justify-start">
+                <a href="https://chatroom-bmea.onrender.com/"
+                    class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+                    <span>Demo</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Sandee004/ChatRoom"
+                    class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+                    <span>Source code</span>
+                        <i class="fa-solid fa-code"></i>
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="item4" class="carousel-item w-full">
+      <div
+        class="bg-[#2D2E32] w-[85%] text-white shadow-xl flex flex-col md:flex-row justify-center items-center align-center mx-auto">
+        <figure><img class="w-fit rounded-t-md"
+            src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album" /></figure>
+        <div class="px-5 text-center md:text-left md:w-2/3 py-3">
+          <p class="font-bold text-2xl">Portfolio site</p>
+          <p>A portfolio site for a web developer showcasing diverse skills and projects made before.</p>
+          <div class="flex flex-row gap-4 justify-center items-center mt-5 text-sm text-green-400 md:justify-start">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>JavaScript</p>
+          </div>
+          <div class="mb-5 flex flex-row flex-wrap gap-2 justify-center md:justify-start">
+                <a href="https://sandee-portfolio-01.vercel.app/"
+                    class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+                    <span>Demo</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Sandee004/Portfolio-v4"
+                    class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+                    <span>Source code</span>
+                        <i class="fa-solid fa-code"></i>
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="item5" class="carousel-item w-full">
+      <div
+        class="bg-[#2D2E32] w-[85%] text-white shadow-xl flex flex-col md:flex-row justify-center items-center align-center mx-auto">
+        <figure><img class="w-fit rounded-t-md"
+            src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album" /></figure>
+        <div class="px-5 text-center md:text-left md:w-2/3 py-3">
+          <p class="font-bold text-2xl">CashMate</p>
+          <p>CashMate is a dummy finance based web app. Upon sign up you get a virtual card for carrying out transactions. You can also see expenses made every week/month in form of charts.</p>
+          <div class="flex flex-row gap-4 justify-center items-center mt-5 text-sm text-green-400 md:justify-start">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>Flask</p>
+          </div>
+          <div class="mb-5 flex flex-row flex-wrap gap-2 justify-center md:justify-start">
+                <a href="http://sandee01.pythonanywhere.com/"
+                    class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+                    <span>Demo</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Sandee004/CashMate"
+                    class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+                    <span>Source code</span>
+                        <i class="fa-solid fa-code"></i>
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="item6" class="carousel-item w-full">
+      <div
+        class="bg-[#2D2E32] w-[85%] text-white shadow-xl flex flex-col md:flex-row justify-center items-center align-center mx-auto">
+        <figure><img class="w-fit rounded-t-md"
+            src="https://img.daisyui.com/images/stock/photo-1494232410401-ad00d5433cfa.jpg" alt="Album" /></figure>
+        <div class="px-5 text-center md:text-left md:w-2/3 py-3">
+          <p class="font-bold text-2xl">Code-Editor</p>
+          <p>A simple code editor for writing and editing HTML, CSS and JS files.</p>
+          <div class="flex flex-row gap-4 justify-center items-center mt-5 text-sm text-green-400 md:justify-start">
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>Flask</p>
+          </div>
+          <div class="mb-5 flex flex-row flex-wrap gap-2 justify-center md:justify-start">
+                <a href="https://code-editor-pi-three.vercel.app/"
+                    class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+                    <span>Demo</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+                <a href="https://github.com/Sandee004/Code-Editor"
+                    class="border-2 border-gray-200 rounded-sm px-3 py-1 hover:bg-green-400 hover:text-black">
+                    <span>Source code</span>
+                        <i class="fa-solid fa-code"></i>
+                </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="pb-8 border-b-2 border-green-400/30 flex justify-center w-full py-2 gap-2">
+    <a href="#item1" class="btn btn-sm">1</a>
+    <a href="#item2" class="btn btn-sm">2</a>
+    <a href="#item3" class="btn btn-sm">3</a>
+    <a href="#item4" class="btn btn-sm">4</a>
+    <a href="#item5" class="btn btn-sm">5</a>
+    <a href="#item6" class="btn btn-sm">6</a>
+  </div>
   </div>
 
 
   <!-- Contact -->
-  <div id="contact" class="border-b-2 border-green-400 my-8">
+  <div id="contact" class="border-b-2 border-green-400/30 my-8">
     <p class="text-2xl font-bold mt-3 mb-0 text-center pt-5">Contact Me</p>
     <p class="text-center">Coffee and code? Hit me up!</p>
     <div class="flex flex-row justify-between items-center mx-auto w-fit py-5 px-5 gap-5">
-      <a href="https://x.com/_SandeeTee_"><i class="fa-brands fa-square-x-twitter text-green-400 text-3xl"></i></a>
-      <a href="https://www.linkedin.com/in/oyarekhua-sandra"><i class="fa-brands fa-linkedin text-green-400 text-3xl"></i></a>
-      <a href="https://github.com/sandee004"><i class="fa-brands fa-github text-green-400 text-3xl"></i></a>
-      <a href="mailto:oyarekhuas@gmail.com"><i class="fa-solid fa-envelope text-green-400 text-3xl"></i></a>
-      <a href="https://drive.google.com/file/d/1OL2M5A6A5OBVOQ8YY8w1Qy9Tdfeya_Uz/view?usp=drivesdk""><i class="fa-solid fa-file text-green-400 text-2xl"></i></a>
+      <a href="https://x.com/_SandeeTee_"><i class="fa-brands fa-square-x-twitter text-green-400 text-xl"></i></a>
+      <a href="https://www.linkedin.com/in/oyarekhua-sandra"><i
+          class="fa-brands fa-linkedin text-green-400 text-xl"></i></a>
+      <a href="https://github.com/sandee004"><i class="fa-brands fa-github text-green-400 text-xl"></i></a>
+      <a href="mailto:oyarekhuas@gmail.com"><i class="fa-solid fa-envelope text-green-400 text-xl"></i></a>
+      <a href="https://drive.google.com/file/d/1OL2M5A6A5OBVOQ8YY8w1Qy9Tdfeya_Uz/view?usp=drivesdk""><i class=" fa-solid
+        fa-file text-green-400 text-xl"></i></a>
     </div>
+    <p class="text-[12px] text-center mt-5">©2024 Oyarekhua Sandra. All Rights Reserved.</p>
   </div>
-
-    <script>
-      const open = document.getElementById("menu-open");
-      const close = document.getElementById("menu-close");
-      const options = document.getElementById("options");
-      const links = options.querySelectorAll('a[href^="#"]');
-      open.addEventListener("click", function () {
-        options.classList.remove("hidden");
-      });
-      close.addEventListener("click", function () {
-        options.classList.add("hidden");
-      });
-      links.forEach(link => {
-        link.addEventListener('click', () => {
-          options.classList.add("hidden");
-        });
-      });
-      /*
-      function myFunction() {
-        const dots = document.getElementById("dots");
-        const moreText = document.getElementById("more");
-        const btnText = document.getElementById("myBtn");
-
-        if (dots.style.display === "none") {
-          dots.style.display = "inline";
-          btnText.innerHTML = "Read more";
-          moreText.style.display = "none";
-        }
-        else {
-          dots.style.display = "none";
-          btnText.innerHTML = "Read less";
-          moreText.style.display = "inline";
-        }
-      }*/
-    </script>
-
-
 </body>
 
 </html>
